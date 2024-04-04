@@ -1,0 +1,19 @@
+<div class="cart-container">
+    <div class="cart-item" *ngFor="let item of cartItems">
+      <div class="item-details">
+        <h2 class="cart-item-name">{{ item.product.name }}</h2>
+        <p class="cart-item-price">${{ item.product.price }}</p>
+      </div>
+      <div class="quantity-control">
+        <button class="quantity-button" (click)="decreaseQuantity(item)">-</button>
+        <span class="quantity-value">{{ item.quantity }}</span>
+        <button class="quantity-button" (click)="increaseQuantity(item)">+</button>
+      </div>
+      &nbsp;<button class="remove-button" (click)="removeFromCart(item)">Remove</button>
+    </div>
+    <div class="cart-empty" *ngIf="!cartItems.length">No products added</div>
+    <div class="cart-total">
+      Total: ${{ cartTotal }} <span class="estimated-delivery">Estimated delivery: 5-7 days</span>
+    </div>
+  </div>
+  

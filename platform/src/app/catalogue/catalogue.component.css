@@ -1,0 +1,91 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 250px;
+  }
+  
+  .product-details {
+    padding: 10px;
+  }
+  
+  .product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .product-info {
+    margin: 5px 0;
+  }
+  
+  .add-to-cart-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cart-actions {
+    margin-top: 10px;
+  }
+  
+  .quantity-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  
+  .quantity {
+    margin: 0 5px;
+  }
+  
+  .cart-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff; /* Background color of the cart icon */
+    color: #fff; /* Text color of the cart icon */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Make the icon circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Box shadow for a raised effect */
+  }
+  
+  .cart-count {
+    position: absolute;
+    bottom: 25px;
+    left: 24px;
+    background-color: red; /* Background color of the count badge */
+    color: #fff; /* Text color of the count badge */
+    padding: 3px 8px;
+    border-radius: 50%; /* Make the badge circular */
+    font-size: 14px;
+  }
+  .remove-button {
+    background-color: #dc3545; /* Red background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+  }
+  
+  .remove-button:hover {
+    background-color: #c82333; /* Darker red background color on hover */
+  }

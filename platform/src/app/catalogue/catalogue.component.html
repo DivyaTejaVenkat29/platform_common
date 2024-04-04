@@ -1,0 +1,22 @@
+<div class="product-container" style="display: flex;justify-content: center; align-items: center;">
+    <div *ngFor="let product of products" class="product-card">
+      <img [src]="product.image" width="200" height="200" [alt]="product.name">
+      <div class="product-details">
+        <p class="product-name">{{ product.name }}</p>
+        <p class="product-info">Weight:{{ product.weight }}</p>
+        <p class="product-info">Price: ${{ product.price }}</p>
+        <button *ngIf="!isProductInCart(product)" class="add-to-cart-btn" (click)="addToCart(product)">Add to cart</button>
+        <div *ngIf="isProductInCart(product)" class="cart-actions">
+          <button class="quantity-btn" (click)="decreaseQuantity(product)">-</button>
+          <span class="quantity">{{ getQuantityInCart(product) }}</span>
+          <button class="quantity-btn" (click)="increaseQuantity(product)">+</button>
+          &nbsp;<button class="remove-button" (click)="removeFromCart(product)">Remove</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cart-icon" (click)="navigateToCart()">
+    <i class="bi bi-cart4"></i>
+    <span class="cart-count">{{ cartCount }}</span>
+  </div>
+  
